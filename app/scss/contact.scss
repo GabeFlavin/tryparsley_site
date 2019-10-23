@@ -1,0 +1,40 @@
+.contact{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    .copy_con{
+        flex: 2 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .copy{
+            a{
+                display: inline;
+            }
+            &:nth-child(1){
+                margin-bottom: 40px;
+            }
+        }
+    }
+    
+    .image_con{
+        flex: 4 0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        svg{
+            width: 80%;
+        }
+        
+    } 
+       
+}
+
+

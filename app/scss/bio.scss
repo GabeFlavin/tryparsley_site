@@ -1,0 +1,60 @@
+.bio{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    
+    .description_con{
+        
+        flex-wrap: wrap;
+        width: 50%;
+        display:  flex;
+        align-items: center;
+        align-content: center;
+        padding: 70px;
+        
+        .description{
+            
+            h1{
+                display: block;
+                font-size: 4vw;
+                margin: 0;
+                padding: 0;
+            }
+            &::first-letter{
+                color: #22ad4b;
+            }
+            a{
+                margin-right: 10px;
+                margin-left: 2px;
+                font-family: $label_font;
+                font-size: .8rem;
+                text-transform: uppercase;
+                text-decoration: none;
+            } 
+        }
+        .copy{
+            margin-top: 10px;
+            font-family: $label_font;
+            line-height: 1.5rem;
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    .image_con{
+        flex: 3 0 auto;
+        background: #ff0;
+        overflow: hidden;
+        display: flex; 
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+        background: url(../img/bio.jpg) center center;
+        background-size: cover;
+    } 
+       
+}
+
+

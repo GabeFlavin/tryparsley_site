@@ -1,0 +1,93 @@
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: -2000px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+
+    .lightboxClose{
+        
+        flex: 1;
+        cursor: pointer;
+        text-align: right;
+        svg{
+            height: 50px;
+        }
+        padding: 20px;
+    }
+
+    
+    .imgCon{
+        position: relative;
+        flex: 1 50%;
+
+        .lightboxImg{
+            display: block;
+            object-fit: contain;
+            opacity: 0;
+            z-index: 0;
+            width: 80vw;
+            max-height: 80vh;
+            margin: auto;
+        }
+    }
+    
+    
+    .controls_con{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        .numbers{ 
+            color: #333;
+            font-size: 1.6rem;
+            line-height: 1.4rem;
+        }
+
+        .left, .right{ 
+            width: 27px;
+            padding: 7px 5px 0px 5px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+    } 
+
+    
+}
+
+
+
+
+video{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.preloader {
+    position: absolute;
+    top: 0;
+    bottom: 0%;
+    left: 0;
+    right: 0%;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    z-index: 999;
+    display: none;
+    svg{
+        width: 100%;
+        object-fit: contain;
+    }
+}

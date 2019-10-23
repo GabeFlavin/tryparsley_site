@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.12.1//EN
+N:;;;;
+FN:True Cut Laser
+ORG:True Cut Laser;
+EMAIL;type=INTERNET;type=HOME;type=pref:info@truecutlaser.com
+TEL;type=MAIN;type=pref:406 586 3302
+ADR;type=WORK;type=pref:;;79 Wildcat Way;Bozeman;MT;59715;USA
+item1.URL;type=pref:truecutlaser.com
+item1.X-ABLabel:_$!<HomePage>!$_
+X-ABShowAs:COMPANY
+X-ABUID:EA363260-7119-41F9-AA09-2343E3F2A42F:ABPerson
+END:VCARD
