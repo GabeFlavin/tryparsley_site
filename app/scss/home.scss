@@ -6,29 +6,57 @@
     align-items: center;
     
     .lockup{
-        margin-top: 90px;
-        svg{
-            width: 40vw;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        .smile{
+            flex: 2 0 auto;
+            width: 100%;
+            min-height: 46vh;
+            position: relative;
+            text-align: center;
             margin: auto;
+            margin-top: 5vh;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                height: 100%;
+                padding: 20px;
+                opacity: 0;
+            }
         }
         .logo{
-            flex: 2;
-            font-size: 3rem;
+
+            flex: 1 0 auto;
+            width: 50vw;
+            font-size: 8vh;
             letter-spacing: 1.4rem;
             color: #22ad4b;
-            padding-top: .85em;
             padding-left: 1.4rem;
             font-family: $header_font;
             text-transform: uppercase;
             text-align: center;
+            margin: auto;
+            opacity: 0;
         }
         .home_nav{
+            flex: 1 0 auto;
             padding: 10px;
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: center;
+            opacity: 0;
             a{
                 padding: 5px;
-                font-size: .8rem;
+                font-size: 1rem;
                 font-family: $header_font; 
                 margin: auto 3px;
                 text-transform: uppercase;
