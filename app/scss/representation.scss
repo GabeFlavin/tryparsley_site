@@ -35,9 +35,23 @@
     .image_con{
         flex: 2 0 auto;
         svg{
-            width: 45%;
+            width: 40vh;
         }
     } 
+    
+    @media all and (max-width: 900px){
+        flex-direction: column;
+        .description_con{ 
+           margin-top: 40px;
+        }
+        
+        .image_con{
+            svg{
+                width: 34vw;
+                margin: auto;
+            }
+        }
+    }
 }
 
 

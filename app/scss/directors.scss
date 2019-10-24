@@ -35,6 +35,21 @@
         text-align: center;
         font-size: 3rem;
     }
+    
+    
+    @media all and (max-width: 900px){
+        flex-direction: column;
+        .directors_con{ 
+           padding: 0;
+        }
+        
+        .image_con{
+            svg{
+                width: 34vw;
+                margin: auto;
+            }
+        }
+    }
    
 }
 
