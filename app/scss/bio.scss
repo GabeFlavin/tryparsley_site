@@ -4,14 +4,23 @@
     flex-direction: row;
     align-items: stretch;
     
+    @media only screen and (max-width : 700px){ 
+        flex-direction: column;
+    }
+    
     .description_con{
         
         flex-wrap: wrap;
-        width: 50%;
+        flex: 1 0 auto;
         display:  flex;
         align-items: center;
         align-content: center;
         padding: 70px;
+        
+        @media only screen and (max-width : 700px){ 
+           padding: 30px;
+            flex: 0 0 0;
+        }
         
         .description{
             
@@ -32,6 +41,18 @@
                 text-transform: uppercase;
                 text-decoration: none;
             } 
+            @media only screen and (max-width : 700px){ 
+                h1{
+                    display: block;
+                    font-size: 10vw;
+                }
+                &::first-letter{
+                    color: #22ad4b;
+                }
+                a{
+                    font-size: 1rem;
+                } 
+            }
         }
         .copy{
             margin-top: 10px;
@@ -53,6 +74,10 @@
         text-align: right;
         background: url(../img/bio.jpg) center center;
         background-size: cover;
+        
+        @media only screen and (max-width : 700px){ 
+           flex: 9 0 auto;
+        }
     } 
        
 }

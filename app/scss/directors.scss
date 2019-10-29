@@ -8,47 +8,57 @@
     
     .directors_con{
         
-        flex: 1;
+        flex: 1 0 auto;
         flex-wrap: wrap;
         display: flex;
         flex-direction: row;
-        padding-left:130px;
-        div{
-            flex: 1 0 auto; 
+        justify-content: center;
+        
+        .thumbnail_con{
+            flex: 0 0 auto;
+            margin: 30px;
             a.thumbnails{
-                margin: 1.5rem;
-                padding: 3px;
-                text-decoration: none;
-                letter-spacing: .07rem;
+                display: block;
+                margin: 5px 0 5px 0;
+                padding: 5px 0 5px 0;
+               
                 .label{
                     font-family: $label_font;
                     text-transform: uppercase;
                     font-size: 2.3rem;
+                    letter-spacing: .07rem;
+                    text-decoration: none;
                 }
             }
         }
     }
     
-    h1{
-        width: 100%;
-        display: block;
-        text-align: center;
-        font-size: 3rem;
-    }
-    
     
     @media all and (max-width: 900px){
-        flex-direction: column;
-        .directors_con{ 
-           padding: 0;
-        }
         
-        .image_con{
-            svg{
-                width: 34vw;
-                margin: auto;
+        flex-direction: column;
+        
+        .directors_con{ 
+            flex-wrap: nowrap;
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+            padding-top: 20px;
+            justify-content: flex-start;
+            .thumbnail_con{ 
+                flex: 0 0 auto; 
+                margin: 0;
+                padding: 0; 
+                a.thumbnails{
+                    margin: 20px 0 0 0;
+                    padding: 0;
+                    .label{
+                        font-size: 6vw;
+                    }
+                }
             }
         }
+        
     }
    
 }

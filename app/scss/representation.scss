@@ -25,9 +25,6 @@
                 }
                 line-height: 1.3rem;
             }
-            a{
-            
-            }
         }
         
     }
@@ -39,10 +36,23 @@
         }
     } 
     
-    @media all and (max-width: 900px){
+    @media all and (max-width: 700px){
         flex-direction: column;
         .description_con{ 
-           margin-top: 40px;
+           margin-top: 20px;
+            .description{
+                font-size: 1rem;
+                div{
+                    margin-bottom: 30px;
+                    font-size: 1rem;
+                    font-family: $label_font;
+                    h6{
+                        display: block;
+                        font-size: 1.4rem;
+                    }
+                    line-height: 1.6rem;
+                }
+            }
         }
         
         .image_con{

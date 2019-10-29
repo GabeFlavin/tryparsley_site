@@ -2,8 +2,9 @@
     
     display: flex;
     align-items: center;
+    align-center: center;
     background: #111 url(../img/parsley_logo_smile.svg) no-repeat 97% center;
-    background-size: 3.7%;
+    background-size: 50px;
     
     a.logo{
         font-family: $header_font;
@@ -12,10 +13,97 @@
         letter-spacing: .18rem;
         color: #fff;
         text-transform: uppercase;
-        flex: .4;
-        padding-left: 40px;
+        flex: .93 0 0;
         text-decoration: none;
+        margin: auto;
+        text-align: left;
     }
+    
+    .menu-name-container{
+        flex: 3 0 0;
+        .menu{
+            display: flex;
+            align-items: center;
+            .menu-item{
+                display: inline-flex;
+                list-style: none;
+                align-items: center;
+                 a{
+                    color:#fff;
+                    text-decoration: none;
+                    text-transform: uppercase; 
+                    font-size: .8rem;
+                    letter-spacing: .07rem;
+                    font-family: $label_font;
+                    margin: 0 5px 0 5px;
+                    padding: 2px 8px;
+                    &:hover{
+                        color: $hover_color;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .current-menu-item{
+                a{
+                    color: #22ad4b;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    #hamburger{ 
+        width: 80px;
+        height: 100%;
+        z-index: 997;
+        display: none;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+        div {
+            width: 40%;
+            height: 1px;
+            background-color: #fff;
+            margin: 2.5px 10px;
+            transition: all 0.1s ease-in-out;
+        }
+        
+
+        &.is-active div:nth-child(2){
+            opacity: 0;
+        }
+
+        &.is-active div:nth-child(1){
+            z-index: 999;
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        &.is-active div:nth-child(3){
+            z-index: 999;
+            transform: translateY(-5px) rotate(-45deg);
+        }
+        
+        &:hover, &.is-active:hover {
+            div{
+                background-color: $hover_color;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width : 700px){ 
+        .menu-name-container{
+            display: none;
+        }
+        #hamburger{
+            display: flex;
+        }
+        background: #111;
+        
+    }
+    
+    
     
     .links{
         flex: 3;

@@ -17,24 +17,45 @@
             padding-bottom: 30px;
             line-height: $header_height;
         }
+        
         &::first-letter{ 
             color: #22ad4b;
+        }
+        
+        @media all and (max-width: 800px){
+            padding-top: 30px;
+            padding-left: 0px;
+            text-align: center;
+            h1{
+                display: block;
+                font-size: 3.5rem;
+                margin-bottom: 5px;
+                padding-bottom: 30px;
+                line-height: 3rem;
+            }
         }
         a{
             margin-right: 8px;
             margin-left: 5px;
-            font-family: $label_font;
+            font-family: $label_font; 
             font-size: .8rem;
             text-transform: uppercase;
             text-decoration: none;
         } 
     }
     
-     
     .descriptions{
         position: absolute;
         bottom: 0;
         opacity:0;
+    }
+    
+    @media all and (max-width: 800px){
+        .descriptions{
+            position: absolute;
+            bottom: 22px;
+            opacity:1;
+        }
     }
 
     .thumbnail_con{
@@ -50,6 +71,7 @@
             width: 17.5vw;
             height: 210px;
             margin-right: 6px;
+            margin-bottom: 20px;
             a{
                 display: block;
                 width: 100%;
@@ -85,8 +107,25 @@
                 }
             }   
         }
-        
+        @media all and (max-width: 800px){
+            flex: 2 0 auto;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-right: 0;
+            margin: 40px auto;
+            
+            .thumbnail{
+                width: 70vw;
+                height: 300px;
+                margin-right: 0;
+                margin: auto;
+            }
+
+        }
     }
+
 }
 
 

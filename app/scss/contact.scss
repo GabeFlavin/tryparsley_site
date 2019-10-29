@@ -38,6 +38,10 @@
     
     @media all and (max-width: 900px){
         flex-direction: column;
+        
+        .copy{
+            font-size: 1.3rem;
+        }
         .copy:nth-child(2){ 
            margin-bottom: 40px;
         }

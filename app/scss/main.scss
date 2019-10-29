@@ -14,11 +14,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 
+$topbar_height: 40px;  
+
 $hover_color: #22ad4b; 
 $header_font: "Arial Black";
 $label_font: "Arial";
 
-$header_size: 4.5vw;
+$header_size: 4.5vw; 
 $header_height: 4vw;
 
 
@@ -32,6 +34,49 @@ body{
     opacity: 0;
     font-family: $header_font;
     overflow-x: hidden;
+}
+
+.dropnav{
+    display: none;
+    position: absolute;
+    top: $topbar_height;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background: #000;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 15px;
+    list-style: none;
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        .menu-item{
+            display: inline-flex;
+            list-style: none;
+             a{
+                color:#fff;
+                text-decoration: none;
+                text-transform: uppercase; 
+                font-size: 1rem;
+                letter-spacing: .07rem;
+                font-family: $label_font;
+                margin: 5px 0 5px 0;
+                padding: 2px 8px;
+                &:hover{
+                    color: $hover_color;
+                    text-decoration: none;
+                }
+            }
+        }
+        .current-menu-item{
+            a{
+                color: #22ad4b;
+                pointer-events: none;
+            }
+        }
+    }
 }
 
 h1::first-letter{
