@@ -2,84 +2,56 @@
     
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-content: stretch;
     
-    @media only screen and (max-width : 700px){ 
+    @media all and (orientation: landscape) and (max-width: 850px){}
+    
+    @media all and (max-width: 900px){
         flex-direction: column;
     }
     
-    .description_con{
+    .row{
         
-        flex-wrap: wrap;
-        flex: 1 0 auto;
         display:  flex;
-        align-items: center;
-        align-content: center;
-        padding: 70px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
         
-        @media only screen and (max-width : 700px){ 
-           padding: 30px;
-            flex: 0 0 0;
-        }
-        
-        .description{
+        &:nth-child(1){
+            flex: 0 1 auto;
+            min-height: 100%;
+            background: #fff;
+            padding: 50px;
             
-            h1{
-                display: block;
-                font-size: 4vw;
-                margin: 0;
-                padding: 0;
-            }
-            &::first-letter{
-                color: #22ad4b;
-            }
-            a{
-                margin-right: 10px;
-                margin-left: 2px;
-                font-family: $label_font;
-                font-size: .8rem;
-                text-transform: uppercase;
-                text-decoration: none;
-            } 
-            @media only screen and (max-width : 700px){ 
-                h1{
-                    display: block;
-                    font-size: 10vw;
-                }
-                &::first-letter{
-                    color: #22ad4b;
-                }
+            .links{
+                margin-bottom: 40px;
                 a{
-                    font-size: 1rem;
-                } 
+                    display: inline-block;
+                    margin-right: 7px;
+                    text-transform: uppercase;
+                }
             }
-        }
-        .copy{
-            margin-top: 10px;
-            font-family: $label_font;
-            line-height: 1.5rem;
             p{
-                margin-top: 10px;
+                margin: 0 0 20px 0;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
             }
         }
+        &:nth-child(2){
+            flex: 0 1 auto;
+            display: flex;
+            background: #ff0;
+            min-height: 100%;
+            background: url(../img/bio.jpg) center center;
+            background-size: cover;
+            
+            @media all and (max-width: 900px){
+                flex-direction: column;
+                flex: 5 0 300px;
+            }
+        } 
     }
-    
-    .image_con{
-        flex: 3 0 auto;
-        background: #ff0;
-        overflow: hidden;
-        display: flex; 
-        align-items: flex-end;
-        justify-content: flex-end;
-        text-align: right;
-        background: url(../img/bio.jpg) center center;
-        background-size: cover;
-        
-        @media only screen and (max-width : 700px){ 
-           flex: 9 0 auto;
-        }
-    } 
-       
+     
 }
 
 

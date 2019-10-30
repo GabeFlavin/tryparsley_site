@@ -1,22 +1,28 @@
 .topbar{
     
     display: flex;
-    align-items: center;
-    align-center: center;
     background: #111 url(../img/parsley_logo_smile.svg) no-repeat 97% center;
     background-size: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    
+    @media all and (orientation: landscape) and (max-width: 850px){
+        display: none;
+    }
     
     a.logo{
         font-family: $header_font;
-        font-size: .9rem;
-        line-height: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         letter-spacing: .18rem;
         color: #fff;
         text-transform: uppercase;
-        flex: .93 0 0;
+        flex: 1 0 0;
         text-decoration: none;
         margin: auto;
         text-align: left;
+        padding: 3px 0 0 13px;
+        display: block;
     }
     
     .menu-name-container{
