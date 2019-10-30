@@ -9,52 +9,51 @@
     text-align: center;
     
     .copy_con{
-        flex: 4 0 auto;
+        flex: 5 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         .copy{
             font-family: $header_font;
-            font-size: 1.2rem;
-            line-height: 1.8rem;
+            font-size: 1rem;
+            line-height: 1.3rem;
             margin-bottom: 8px;
             a{
                 display: inline;
             }
             &:nth-child(1){
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
         }
     }
     
     .image_con{
-        flex: 2 0 auto;
+        flex: 4 0 auto;
         display: flex;
         flex-direction: column;
         min-height: 100%;
         svg{
-            width: 70vh;
+            width: 35vw;
         }
         
     } 
     
     
-    @media all and (max-width: 900px){
+    @media all and (max-width: $mobile_size){
         flex-direction: column;
         
         .copy{
-            font-size: 1.3rem;
+            font-size: 1rem;
         }
         .copy:nth-child(2){ 
-           margin-bottom: 40px;
+           margin-bottom: 20px;
+
         }
-        
-            
         
         .image_con{
             svg{
-                width: 45vh;
+                width: 30vh;
                 margin: auto;
             }
         }

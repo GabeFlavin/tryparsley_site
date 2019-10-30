@@ -14,23 +14,19 @@
         align-items: center;
         justify-content: center;
         display: flex;
-        padding: 10px 20px 0 20px;
+        padding: 20px 20px 0 20px;
         
         .title{
             display: flex;
             align-items: flex-start;
             flex: 2 0 auto;
             flex-direction: column;
-            padding: 0 0px;
-            h1{
-                font-size: 3.4rem;
-                margin-right: 60px;
-            }
+            padding: 0;
             .links{
                 a{
-                    padding: 0 10px;
+                    padding: 0;
                     text-transform: uppercase;
-                    font-size: .8rem;
+                    font-size: .9rem;
                     display: inline-block;
                 }
             }
@@ -99,36 +95,10 @@
         
         
         &:nth-child(1){
-            flex: 3 0 0;
-            @media all and (max-width: 700px){
-                flex: 3 0 auto;
-                h1{
-                    font-size: 2.4rem;
-                    margin-right: 0px;
-                }
-                .links{
-                    a{
-                        padding: 0 10px;
-                        text-transform: uppercase;
-                        font-size: .8rem;
-                        display: inline-block;
-                    }
-                }
-            }
-            @media all and (orientation: landscape) and (max-width: 850px){
-                h1{
-                    font-size: 1.6rem;
-                }
-                .links{
-                    a{
-                        padding: 0;
-                        margin-right: 3px;
-                    }
-                }
-            }
+            flex: .3 0 auto;
         }
         &:nth-child(2){
-            flex: 3 0 0;
+            flex: 2 0 0;
             align-items: flex-start;
             @media all and (max-width: 700px){
                 flex: auto;
