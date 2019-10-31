@@ -1,67 +1,72 @@
 .representation{
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     
     
     .description_con{
-        flex: 3 0 auto;
+        flex: 1 0 auto;
+        width: 60%;
         display: flex;
-        align-items: center;
+       align-items: flex-start;
         justify-content: center;
-        .description{
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-
-            font-size: .85rem;
-            div{
-                margin: 10px 0 10px 0;
-                font-size: .8rem;
-                font-family: $label_font;
-                h6{
-                    display: block;
-                    font-size: 1.1rem;
-                    margin-bottom: 1px;
-                }
-                line-height: 1.2rem;
+        .info{
+            margin: 60px 20px 0px 20px;
+            flex: 1 0 auto;
+            font-size: .8rem;
+            font-family: $label_font;
+            h6{
+                display: block;
+                font-size: 1.1rem;
+                margin-bottom: 1px;
             }
+            line-height: 1.2rem;
         }
-        
     }
+    
     .image_con{
-        flex: 2 0 auto;
+        
+        flex: 1 0 auto;
+        align-items: flex-end;
+        display: flex;
         svg{
-            width: 34vh;
+            width: 20vh;
         }
     } 
     
     @media all and (max-width: $mobile_size){
-        flex-direction: column;
-        .description_con{ 
-           margin-top: 15px;
-            .description{
-                font-size: 1rem;
-                div{
-                    margin-bottom: 20px;
-                    font-size: .9rem;
-                    font-family: $label_font;
-                    h6{
-                        display: block;
-                        font-size: 1.2rem;
-                    }
-                    line-height: 1.3rem;
-                }
-            }
-        }
-        
         .image_con{
+            flex: 1 0 auto;
+            align-items: center;
+            display: flex;
             svg{
-                width: 30vw;
-                margin: auto;
+                width: 15vh;
+            }
+        } 
+        .description_con{
+            flex: 1 0 auto;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 20px;
+            .info{
+                text-align: center;
+                margin: 10px auto 0 auto;
+                flex: 1 0 auto;
+                font-size: .8rem;
+                font-family: $label_font;
+                h6{
+                    display: block;
+                    font-size: 1.2rem;
+                    margin-bottom: 1.1px;
+                }
+                line-height: 1rem;
             }
         }
     }
